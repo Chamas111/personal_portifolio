@@ -1,41 +1,52 @@
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import React, { useState } from "react";
+import { Container, Row, Col, Tab, Nav, Button } from "react-bootstrap";
 import ProjectCard from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
 import MyRecipesBlog from "../assets/img/MyRecipesBlog.png";
 import Airbnb from "../assets/img/Airbnb.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import Hackernews from "../assets/img/Hackernews.png";
 import moviebild from "../assets/img/moviebild.png";
 import MobileApp from "../assets/img/mobileapp0.png";
-import pokemonbild from "../assets/img/pokemon-bild.png";
+import TRVL from "../assets/img/TRVL_Site.png";
 import Pinchofsalt from "../assets/img/Pinch-of-salt.png";
 import commerce from "../assets/img/commerce.png";
 import ipadress from "../assets/img/ipadress.png";
-
+import MobileApp_Video from "../assets/img/mobileapp-vedio.mp4";
 import "animate.css";
+
 import TrackVisibility from "react-on-screen";
 
 const Projects = () => {
+  const [showVideo, setShowVideo] = useState(false);
+
+  const handleOpenVideo = () => {
+    setShowVideo(true);
+  };
+
+  const handleOpenProjects = () => {
+    setShowVideo(false);
+  };
+
   const projects = [
     {
-      title: "Pokemon",
+      title: "TRVL",
       description: "Design & Development",
-      imgUrl: pokemonbild,
-
+      imgUrl: TRVL,
+      linkto: "https://trvl-web1.netlify.app/",
       category: "Web App",
     },
     {
       title: "Movie App",
       description: "Design & Development",
       imgUrl: moviebild,
-
+      linkto: "https://resonant-pegasus-f6c87d.netlify.app/",
       category: "Web App",
     },
     {
       title: "Hacker News",
       description: "Design & Development",
       imgUrl: Hackernews,
-
+      linkto: "https://ahns.netlify.app/",
       category: "Web App",
     },
     {
@@ -49,35 +60,35 @@ const Projects = () => {
       title: "Pinch of Salt",
       description: "Design & Development",
       imgUrl: Pinchofsalt,
-
+      linkto: "https://peppy-starburst-08fd89.netlify.app/",
       category: "Web App",
     },
     {
       title: "My Recipes Blog",
       description: "Design & Development",
       imgUrl: MyRecipesBlog,
-
+      linkto: "https://rodrigomenezes22.github.io/cook-book-group4/index.html",
       category: "Web App",
     },
     {
       title: "Commerce Shop",
       description: "Design & Development",
       imgUrl: commerce,
-
+      linkto: "https://deploy-preview-24--e-commerce-dfcf9a.netlify.app/",
       category: "Web App",
     },
     {
       title: "ip Tracker",
       description: "Design & Development",
       imgUrl: ipadress,
-
+      linkto: "https://main--gleeful-gumdrop-fb38a7.netlify.app/",
       category: "Web App",
     },
     {
       title: "Airbnb",
       description: "Design & Development",
       imgUrl: Airbnb,
-
+      linkto: "https://airbnb-kbf1.onrender.com",
       category: "Web App",
     },
   ];
@@ -150,7 +161,17 @@ const Projects = () => {
                         </p>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                        <a href="">
+                        {showVideo ? (
+                          <div>
+                            <video controls>
+                              <source src={MobileApp_Video} type="video/mp4" />
+                              Your browser does not support the video tag.
+                            </video>
+                            <Button onClick={handleOpenProjects}>
+                              Back to Projects
+                            </Button>
+                          </div>
+                        ) : (
                           <Row>
                             {projects
                               .filter(
@@ -159,8 +180,11 @@ const Projects = () => {
                               .map((project, index) => (
                                 <ProjectCard key={index} {...project} />
                               ))}
+                            <Button onClick={handleOpenVideo}>
+                              Watch Video
+                            </Button>
                           </Row>
-                        </a>
+                        )}
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
