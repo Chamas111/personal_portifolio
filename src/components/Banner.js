@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/mybild3.png";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -51,6 +51,14 @@ const Banner = () => {
     }
   };
 
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.error(`Section with id '${sectionId}' not found.`);
+    }
+  }
   return (
     <section className="banner" id="home">
       <Container>
@@ -84,7 +92,11 @@ const Banner = () => {
                     code, test, and manage comprehensive websites and
                     applications.
                   </p>
-                  <button onClick={() => console.log("connect")}>
+                  <button
+                    onClick={() => {
+                      scrollToSection("connect");
+                    }}
+                  >
                     Let’s Connect <ArrowRightCircle size={25} />
                   </button>
                 </div>
@@ -99,7 +111,11 @@ const Banner = () => {
                     isVisible ? "animate__animated animate__zoomIn" : ""
                   }
                 >
-                  <img src={headerImg} alt="Header Img" />
+                  <img
+                    src={headerImg}
+                    alt="Header Img"
+                    className="banner-img"
+                  />
                 </div>
               )}
             </TrackVisibility>

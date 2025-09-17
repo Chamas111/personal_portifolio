@@ -39,9 +39,7 @@ const NavBar = () => {
     <div>
       <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
         <Container>
-          <Navbar.Brand href="#home">
-            <img src={logo} alt="logo" />{" "}
-          </Navbar.Brand>
+          <Navbar.Brand href="#home"></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
@@ -101,9 +99,7 @@ const NavBar = () => {
                 <a href="https://www.linkedin.com/in/ahmad-chamas-409a45119/">
                   <img src={navIcon1} alt="" />
                 </a>
-                <a href="https://www.facebook.com/profile.php?id=100001837690821">
-                  <img src={navIcon2} alt="" />
-                </a>
+
                 <a href="https://github.com/Chamas111">
                   <img src={navIcon3} alt="" />
                 </a>
