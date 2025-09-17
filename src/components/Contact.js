@@ -109,7 +109,7 @@ const Contact = () => {
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="tel"
-                          value={formData.uses_phone}
+                          value={formData.user_phone}
                           name="user_phone"
                           placeholder="Phone No."
                           onChange={handleChange}
