@@ -12,18 +12,13 @@ const Footer = () => {
     <footer className="footer">
       <Container>
         <Row className="align-items-center">
-          <Col size={12} sm={6}>
-            <img src={logo} alt="Logo" />
-          </Col>
-          <Col size={12} sm={6} className="text-center text-sm-end">
+          <Col size={12} sm={12} className="text-center">
             <div className="social-icon">
-              <a href="#">
+              <a href="https://www.linkedin.com/in/ahmad-chamas-409a45119/">
                 <img src={navIcon1} alt="Icon" />
               </a>
-              <a href="#">
-                <img src={navIcon2} alt="Icon" />
-              </a>
-              <a href="#">
+
+              <a hhref="https://github.com/Chamas111">
                 <img src={navIcon3} alt="Icon" />
               </a>
             </div>

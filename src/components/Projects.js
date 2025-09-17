@@ -9,9 +9,12 @@ import moviebild from "../assets/img/moviebild.png";
 import MobileApp from "../assets/img/mobileapp0.png";
 import TRVL from "../assets/img/TRVL_Site.png";
 import Pinchofsalt from "../assets/img/Pinch-of-salt.png";
-import commerce from "../assets/img/commerce.png";
+import commerce from "../assets/img/onlineshop2.png";
 import ipadress from "../assets/img/ipadress.png";
+import poke from "../assets/img/poke.png";
+import kirsch from "../assets/img/Kirsch.png";
 import MobileApp_Video from "../assets/img/mobileapp-vedio.mp4";
+
 import "animate.css";
 
 import TrackVisibility from "react-on-screen";
@@ -39,7 +42,7 @@ const Projects = () => {
       title: "Movie App",
       description: "Design & Development",
       imgUrl: moviebild,
-      linkto: "https://resonant-pegasus-f6c87d.netlify.app/",
+      linkto: "https://movieapplication3.netlify.app/",
       category: "Web App",
     },
     {
@@ -71,10 +74,10 @@ const Projects = () => {
       category: "Web App",
     },
     {
-      title: "Commerce Shop",
+      title: "Online Shop",
       description: "Design & Development",
       imgUrl: commerce,
-      linkto: "https://deploy-preview-24--e-commerce-dfcf9a.netlify.app/",
+      linkto: "online-shop23.netlify.app",
       category: "Web App",
     },
     {
@@ -88,7 +91,21 @@ const Projects = () => {
       title: "Airbnb",
       description: "Design & Development",
       imgUrl: Airbnb,
-      linkto: "https://airbnb-kbf1.onrender.com",
+      linkto: "https://bookingappl.netlify.app/",
+      category: "Web App",
+    },
+    {
+      title: "Pokemon App",
+      description: "Design & Development",
+      imgUrl: poke,
+      linkto: "https://pokemonapplic.netlify.app/",
+      category: "Web App",
+    },
+    {
+      title: "Moving App",
+      description: "Design & Development",
+      imgUrl: kirsch,
+      linkto: "https://unternehmenkirsch.netlify.app/login",
       category: "Web App",
     },
   ];
