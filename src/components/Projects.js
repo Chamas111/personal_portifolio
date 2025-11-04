@@ -77,7 +77,7 @@ const Projects = () => {
       title: "Online Shop",
       description: "Design & Development",
       imgUrl: commerce,
-      linkto: "online-shop23.netlify.app",
+      linkto: "https://online-shop23.netlify.app",
       category: "Web App",
     },
     {
