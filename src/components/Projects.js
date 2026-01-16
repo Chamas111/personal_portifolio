@@ -124,8 +124,12 @@ const Projects = () => {
                 >
                   <h2>Projects</h2>
                   <p>
-                    These projects that I have built during the Full stack web &
-                    App development course.
+                    I maintain a personal project portfolio website where I
+                    present my web development projects. The page showcases
+                    real-world applications I have built using modern web
+                    technologies, highlighting my skills in frontend
+                    development, fullstack architecture, and clean, maintainable
+                    code.
                   </p>
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav
