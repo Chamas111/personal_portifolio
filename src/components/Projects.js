@@ -32,27 +32,6 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "TRVL",
-      description: "Design & Development",
-      imgUrl: TRVL,
-      linkto: "https://trvl-web1.netlify.app/",
-      category: "Web App",
-    },
-    {
-      title: "Movie App",
-      description: "Design & Development",
-      imgUrl: moviebild,
-      linkto: "https://movieapplication3.netlify.app/",
-      category: "Web App",
-    },
-    {
-      title: "Hacker News",
-      description: "Design & Development",
-      imgUrl: Hackernews,
-      linkto: "https://ahns.netlify.app/",
-      category: "Web App",
-    },
-    {
       title: "Scan Eat",
       description: "Design & Development",
       imgUrl: MobileApp,
@@ -80,13 +59,7 @@ const Projects = () => {
       linkto: "https://online-shop23.netlify.app",
       category: "Web App",
     },
-    {
-      title: "ip Tracker",
-      description: "Design & Development",
-      imgUrl: ipadress,
-      linkto: "https://main--gleeful-gumdrop-fb38a7.netlify.app/",
-      category: "Web App",
-    },
+
     {
       title: "Airbnb",
       description: "Design & Development",
@@ -167,7 +140,7 @@ const Projects = () => {
                           <Row>
                             {projects
                               .filter(
-                                (project) => project.category === "Web App"
+                                (project) => project.category === "Web App",
                               )
                               .map((project, index) => (
                                 <ProjectCard key={index} {...project} />
@@ -196,7 +169,7 @@ const Projects = () => {
                           <Row>
                             {projects
                               .filter(
-                                (project) => project.category === "Mobile App"
+                                (project) => project.category === "Mobile App",
                               )
                               .map((project, index) => (
                                 <ProjectCard key={index} {...project} />
